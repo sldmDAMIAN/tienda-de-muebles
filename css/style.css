@@ -41,7 +41,7 @@ body {
 
 .titulos {
   text-align: center;
-  margin: 10rem 0;
+  margin: 8rem 0 5rem 0;
 }
 
 .centrar-texto {
@@ -53,6 +53,7 @@ body {
   background-color: #8cbc00;
   display: block;
   color: var(--blanco);
+  text-align: center;
   text-transform: uppercase;
   font-weight: 900;
   padding: 1rem;
@@ -62,6 +63,10 @@ body {
 
 .btn:hover {
   background-color: #769c02;
+}
+
+.max-width-30 {
+  max-width: 30rem;
 }
 
 a {
@@ -301,5 +306,100 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+/*=============================================================================*/
+/* Blog */
+.contenedor-blog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.entrada {
+  border-bottom: 2px solid var(--gris);
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+  border-bottom: none;
+}
+
+.entrada-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-weight: bold;
+}
+
+.entrada-meta span {
+  color: #037bc0;
+}
+
+.contenido-entrada-blog {
+  width: 60rem;
+  margin: 0 auto;
+}
+/*=============================================================================*/
+/* Pagina Galeria */
+.galeria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.galeria img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+}
+/*=============================================================================*/
+/* Pagina Contacto */
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border: 1px solid var(--negro);
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: #005485;
+  color: var(--blanco);
+  width: 100%;
+  text-align: center;
+  padding: 0.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.campo {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+  flex: 1;
+  border-radius: 0.7rem;
+  border: 1px solid var(--gris);
+  padding: 1rem;
+}
+
+textarea {
+  resize: none;
 }
 /*=============================================================================*/
