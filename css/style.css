@@ -582,12 +582,18 @@ aside h3 {
 
 .campo {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.campo label {
-  flex-basis: 8rem;
+@media (min-width: 768px) {
+  .campo {
+    flex-direction: row;
+  }
+  .campo label {
+    flex-basis: 8rem;
+  }
 }
 
 .campo input:not([type="radio"]),
